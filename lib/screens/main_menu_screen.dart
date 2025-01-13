@@ -36,7 +36,12 @@ class MainMenuScreen extends StatelessWidget {
                   game.overlays.remove('mainMenu');
                   game.resumeEngine();
                 },
-                child: Image.asset(Assets.message)),
+                child: const Text("Play",style: TextStyle(
+                fontSize: 60,
+                color: Colors.white,
+                fontFamily: 'Game',
+                                ))
+                ),
             GestureDetector(
               onTap: () {
                 Navigator.of(context).push(
@@ -47,7 +52,7 @@ class MainMenuScreen extends StatelessWidget {
                 'Wallet',
                 style: TextStyle(
                   fontSize: 60,
-                  color: Colors.green,
+                  color: Colors.white,
                   fontFamily: 'Game',
                 ),
               ),

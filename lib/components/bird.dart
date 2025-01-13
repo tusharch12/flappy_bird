@@ -19,8 +19,8 @@ class Bird extends SpriteGroupComponent<BirdMovement>
 Future<void> onLoad() async {
 
   final birdMidFlap = await gameRef.loadSprite(Assets.birdMidFlap);
-  final birdUpFlap = await gameRef.loadSprite(Assets.birdUpFlap);
-  final birdDownFlap = await gameRef.loadSprite(Assets.birdDownFlap);
+  // final birdUpFlap = await gameRef.loadSprite(Assets.birdUpFlap);
+  // final birdDownFlap = await gameRef.loadSprite(Assets.birdDownFlap);
 
   sprites = {
     BirdMovement.middle: birdMidFlap,
@@ -55,7 +55,7 @@ Future<void> onLoad() async {
         onComplete: () => current = BirdMovement.down,
       ),
     );
-    FlameAudio.play(Assets.flying);
+    // FlameAudio.play(Assets.flying);
     current = BirdMovement.up;
   }
 
@@ -76,7 +76,7 @@ Future<void> onLoad() async {
   }
 
   void gameOver() {
-    FlameAudio.play(Assets.collision);
+    // FlameAudio.play(Assets.collision);
     game.isHit = true;
     gameRef.overlays.add('gameOver');
     gameRef.pauseEngine();
